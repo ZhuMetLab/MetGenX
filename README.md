@@ -16,6 +16,11 @@ MetGenX is a structure-informed generative model for metabolite annotation based
   - `rdkit==2023.9.5`
   - `gensim==4.3.2`
   - `lightgbm==4.5.0`
+  - `pytorch_lightning==2.2.5`
+  - `six==1.16.0`
+  - `more_itertools==10.5.0`
+  - `scipy==1.12.0`
+  - `jpype1==1.5.0`
 
 - The model requires Java SE Development Kit 11.0.23 (JDK 11.0.23)
 
@@ -100,6 +105,4 @@ m/z3 intensity3
 - **"No formula provided in spectra data"**  
   Ensure each spectrum in the `.mgf` file includes a `formula` field in its metadata.
 
-
-## Maintainer
-- Hongmiao Wang (wanghongmiao@sioc.ac.cn)
+  
