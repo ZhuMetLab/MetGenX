@@ -1,0 +1,13 @@
+numpy==1.26.4
+pandas==2.2.3
+faiss-cpu==1.8.0
+transformers==4.42.3
+torch==2.4.1
+rdkit==2023.9.5
+gensim==4.3.2
+lightgbm==4.5.0
+pytorch_lightning==2.2.5
+six==1.16.0
+more_itertools==10.5.0
+scipy==1.12.0
+jpype1==1.5.0
