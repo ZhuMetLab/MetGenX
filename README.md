@@ -30,9 +30,9 @@ MetGenX is a structure-informed generative model for metabolite annotation based
 ### 1. Clone the project
 
 You can install MetGenX by cloning the repository:
+download the code from [Anonymous GitHub](https://anonymous.4open.science/r/MetGenX-5D63)
 
 ```bash
-git clone https://github.com/<your-username>/MetGenX.git
 cd MetGenX
 ```
 ### 2.  Install Dependencies
@@ -42,7 +42,8 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 3. Download Model Weights and Databases
-Download or copy the following weights and database dir into the project structure:
+Download the following weights and databases from [zenodo](https://zenodo.org/records/15709467?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc1MDQ4OTEyMywiZXhwIjoxNzY3MTM5MTk5fQ.eyJpZCI6IjUyYWM5MWM1LTg1NjctNGY3Yy1hYzI4LTc2MTE0Y2ZiNjhmMCIsImRhdGEiOnt9LCJyYW5kb20iOiJkMThkYzNjOGU2NmZmZTBmMjU5NDJiNzMyNzA2N2Y1ZiJ9.wvkBPL-O323g-6fjnqiYBQ2r-CVCgH68ZCoh7CAjAW7Qzbm1hISx0lVVL_nLBj-D9ZiB-NYCIM0lgJ_3BdnYJA)
+copy the weights and database dir into the project structure:
 <pre>MetGenX/
 - weights/
 - database/</pre>
