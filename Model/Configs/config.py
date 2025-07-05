@@ -188,12 +188,3 @@ class Config_databse(Config_Base):
         self.background_db = background_db
         self.fp_table_path = fp_table_path
         self.checkpoint_path = checkpoint_path
-
-if __name__ == '__main__':
-    config = Config()
-    config.output_json("./config.json")
-    dict = config.to_dict()
-
-    config2 = Config_databse("/mnt/local-disk1/data/Wanghongmiao/MetGenX/weights/generation/config_database.json")
-    config.output_json("/mnt/local-disk1/data/Wanghongmiao/MetGenX/weights/generation/config_database.json")
-    dict = config.to_dict()
