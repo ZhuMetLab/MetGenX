@@ -43,7 +43,7 @@ source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ### 3. Download Model Weights and Databases
-Download the following weights and databases from [zenodo](https://doi.org/10.5281/zenodo.15709467)
+Download the following weights and databases from [zenodo](https://doi.org/10.5281/zenodo.17578304)
 copy the weights and database dir into the project structure:
 <pre>MetGenX/
 - weights/
@@ -138,7 +138,7 @@ If the training dataset is constructed successfully, the following files will be
 > **Note:** During training of the spectra embedding model, we observed some randomness that may lead to slight differences in the training results. To reproduce our exact experimental results, you can use the pre-trained `SpecEmbed_model` weights provided by us. Place the weights in:
 >
 > ```
-> # Our pre-trained weights in [./results/MassSpecGym/weights/word2vec/SpecEmbed_model](https://doi.org/10.5281/zenodo.15709467)
+> # Our pre-trained weights in [./results/MassSpecGym/weights/word2vec/SpecEmbed_model](https://doi.org/10.5281/zenodo.17578304)
 > ./results/{datasetname}/weights/word2vec/SpecEmbed_model
 > ```
 
@@ -162,7 +162,7 @@ Parameters:
 | `--accelerator`             | `str`    | `"gpu"`         | Training device: `'gpu'` or `'cpu'`                    |
 
 **Note:**
-- The pretrained weights can be downloaded from [here](https://doi.org/10.5281/zenodo.15709467).(./weights/Pretrained_Weight_MetGenX.pth)
+- The pretrained weights can be downloaded from [here](https://doi.org/10.5281/zenodo.17578304).(./weights/Pretrained_Weight_MetGenX.pth)
   This model was pretrained on 2.17 M biological molecules by structure similarity.
 - If you want to change the hyperparameters, please modify the parameters in following files:
   - Parameters for model: `./weight/generation/config.json`
@@ -204,7 +204,7 @@ The evaluation supports two modes:
 To evaluate the model on database-free mode, the constructed dataset can be directly used.
 
 #### 2. Retrieval molecule generation (database-restricted)
-To evaluate the model on database-restricted mode, the candidate list should be provided. The demo candidate list is available in [here](https://doi.org/10.5281/zenodo.15709467).
+To evaluate the model on database-restricted mode, the candidate list should be provided. The demo candidate list is available in [here](https://doi.org/10.5281/zenodo.17578304).
 See ./MassSpecGym/MassSpecGym_retrieval_candidates_formula_canoical.json
 The candidate list should be in the following format:
 > {"True SMILES": ["Candidate_SMILES1", "Candidate_SMILES2", "Candidate_SMILES3", ...]}
