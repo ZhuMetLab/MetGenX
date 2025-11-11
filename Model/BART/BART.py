@@ -54,12 +54,11 @@ class BARTModel(BaseModel):
         Src_SMILES = batch_input['Src_SMILES']
         Decoder_SMILES = batch_input['dec_SMILES']
         memory, src_padding_mask = self.encoder(batch_input)
-        outputs = self.decoder(memory, Decoder_SMILES)
-        loss, lm_logits = self.Cal_Masked_loss(outputs=outputs, labels=Src_SMILES)
+        outputs = self.decoder(memory, Decoder_SMILES.long())
+        loss, lm_logits = self.Cal_Masked_loss(outputs=outputs, labels=Src_SMILES.long())
         return outputs, loss
     def decode(self, batch_input: dict, generate_config, Formula_vector):
         memory, src_padding_mask = self.encoder(batch_input)
-        batch_size = len(batch_input["names"])  # batch_size
         # beam search
         batch_size = memory.size(0)  # batch_size
         # beam search

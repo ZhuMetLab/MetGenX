@@ -53,11 +53,18 @@ class BaseModel(pl.LightningModule):
         return loss
 
     # do something with these
+    # # optimizers for NIST
+    # def configure_optimizers(self):
+    #     optimizer = AdamW(self.parameters(), lr=self.lr, betas=(0.9, 0.999), weight_decay=self.weight_decay)
+    #     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=self.num_warmup,
+    #                                                 num_training_steps=self.max_steps)
+    #     return [optimizer], [scheduler]
+
+    # optimizers for MassSpecGym
     def configure_optimizers(self):
-        optimizer = AdamW(self.parameters(), lr=self.lr, betas=(0.9, 0.999), weight_decay=self.weight_decay)
-        scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=self.num_warmup,
-                                                    num_training_steps=self.max_steps)
-        return [optimizer], [scheduler]
+        return torch.optim.Adam(
+            self.parameters(), lr=self.lr, weight_decay=self.weight_decay
+        )
 
     def init_weights(self):
         for name, module in self._modules.items():
