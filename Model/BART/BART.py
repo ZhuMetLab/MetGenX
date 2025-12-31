@@ -53,9 +53,14 @@ class BARTModel(BaseModel):
     def forward(self, batch_input: dict):
         Src_SMILES = batch_input['Src_SMILES']
         Decoder_SMILES = batch_input['dec_SMILES']
+        if Src_SMILES is not None:
+            Src_SMILES = Src_SMILES.long()
+        if Decoder_SMILES is not None:
+            Decoder_SMILES = Decoder_SMILES.long()
+
         memory, src_padding_mask = self.encoder(batch_input)
-        outputs = self.decoder(memory, Decoder_SMILES.long())
-        loss, lm_logits = self.Cal_Masked_loss(outputs=outputs, labels=Src_SMILES.long())
+        outputs = self.decoder(memory, Decoder_SMILES)
+        loss, lm_logits = self.Cal_Masked_loss(outputs=outputs, labels=Src_SMILES)
         return outputs, loss
     def decode(self, batch_input: dict, generate_config, Formula_vector):
         memory, src_padding_mask = self.encoder(batch_input)

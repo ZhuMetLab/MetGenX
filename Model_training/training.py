@@ -122,12 +122,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(args)
 
-    # datasetname = "NPLIB1"
-    # path_train = os.path.join("results", datasetname, f"input_dataset.dataset")
-    # batch_size = 64
-    # num_workers = 4
-    # config_path = "./weights/generation/config.json"
-    # generate_config_path = "./weights/generation/config_generation.json"
-    # checkpoint_path = "./data/Pretrained_Weight_MetGenX.pth"
-    # lr = 5e-6
-    # num_warmup = 2000
