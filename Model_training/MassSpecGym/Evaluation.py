@@ -6,7 +6,7 @@
 # Description: 
 """
 import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 import numpy as np
 from massspecgym.data import MassSpecDataModule
 import torch
@@ -31,7 +31,7 @@ def main(args):
         generate_config_path = os.path.join("results", args.datasetname, f"./weights/generation/config_generation.json")
         vocab_path = os.path.join("results", args.datasetname, f"./weights/generation/vocab.txt")
         convert_dict_path = os.path.join("results", args.datasetname, f"./weights/generation/Convert_dict.dict")
-        checkpoint_path = os.path.join("results", args.datasetname, f"./weights/generation/Trained_Weight.pth")
+        checkpoint_path = os.path.join("results", args.datasetname, f"./weights/generation/Trained_Weight.pth.ckpt")
 
     else:
         dataset_path = args.dataset
