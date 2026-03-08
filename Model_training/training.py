@@ -108,7 +108,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Train MetGenX model for metabolite generation")
-    parser.add_argument("--datasetname", type=str, default="NPLIB1", help="Name of dataset for training")
+    parser.add_argument("--datasetname", type=str, default="MassSpecGym", help="Name of dataset for training")
     parser.add_argument("--path_train", type=str, default=None, help="Dataset")
     parser.add_argument("--config_path", type=str, default=None, help="Path to model config JSON")
     parser.add_argument("--generate_config_path", type=str, default=None, help="Path to generation config JSON")
