@@ -244,3 +244,6 @@ The evaluation results will be saved in `./results/{datasetname}/eval_result/`
 ---
 ## Maintainers
 [@ Hongmiao Wang](https://github.com/waterom)
+
+## License
+Creative Commons License This work is licensed under the Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
