@@ -72,6 +72,19 @@ python run.py --spec_path ./test/demo_positive.mgf  --mode Restricted --output .
 | `--output`    | `str`    | `"generation_results.csv"`| Output CSV file path                        |
 | `--db_cutoff` | `float`  | `0.4`                     | Similarity cutoff for template filtering    |
 
+
+### installation and usage via pip
+
+Alternatively pip can be used to install the package and then the can be used from the command line as one would use an executable. 
+
+```bash
+# Install the package using pip (this uses the pyproject.toml file)
+pip install .
+
+# Run demo data in positive mode using "metgenx"
+metgenx --spec_path ./test/demo_positive.mgf  --mode Restricted --output ./test/generation_results_restricted.csv
+```
+
 ## MS2 spectra format
 ### mgf
 ```bash
