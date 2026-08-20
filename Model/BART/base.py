@@ -1,6 +1,6 @@
 import pytorch_lightning as pl
 import torch
-from transformers import AdamW, get_linear_schedule_with_warmup
+from transformers import get_linear_schedule_with_warmup
 from torch.nn import CrossEntropyLoss
 import torch.nn as nn
 class BaseModel(pl.LightningModule):
@@ -55,7 +55,7 @@ class BaseModel(pl.LightningModule):
     # do something with these
     # # optimizers for NIST
     # def configure_optimizers(self):
-    #     optimizer = AdamW(self.parameters(), lr=self.lr, betas=(0.9, 0.999), weight_decay=self.weight_decay)
+    #     optimizer = torch.optim.AdamW(self.parameters(), lr=self.lr, betas=(0.9, 0.999), weight_decay=self.weight_decay)
     #     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=self.num_warmup,
     #                                                 num_training_steps=self.max_steps)
     #     return [optimizer], [scheduler]
