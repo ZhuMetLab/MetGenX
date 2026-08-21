@@ -2,6 +2,7 @@
 # transformers, but it has since been moved out of transformers in newer
 # versions. We therefore changed its usage to fall back to torch.optim.AdamW.import pytorch_lightning as pl
 
+import pytorch_lightning as pl
 import torch
 from transformers import get_linear_schedule_with_warmup
 from torch.nn import CrossEntropyLoss
