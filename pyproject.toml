@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MetGenX"
+version = "1.1.0"
+description = "A structure-informed generative model for metabolite annotation based on MS2 spectra. This command-line tool processes a single MS2 spectra file (.msp/.mgf) and outputs generated structures."
+readme = "README.md"
+license-files = [
+    "LICENSE.md",
+    "licenses.md"
+]
+requires-python = ">=3.10"
+authors = [
+    { name = "Hongmiao Wang" }
+]
+
+dependencies = [
+    "numpy>=1.26.4",
+    "pandas>=2.2.3",
+    "faiss-cpu>=1.8.0",
+    "transformers>=4.42.3",
+    "torch>=2.4.1",
+    "rdkit>=2023.9.5",
+    "gensim>=4.3.2",
+    "lightgbm>=4.5.0",
+    "pytorch_lightning>=2.2.5",
+    "six>=1.16.0",
+    "more_itertools>=10.5.0",
+    "scipy>=1.12.0",
+    "jpype1>=1.5.0",
+]
+
+[project.scripts]
+metgenx = "run:main"
+
+[tool.setuptools]
+py-modules = ["run",]
+
+[tool.setuptools.packages.find]
+where = ["."]
